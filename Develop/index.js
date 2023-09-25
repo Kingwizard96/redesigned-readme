@@ -21,12 +21,44 @@ const questions = [
             }
     
         },
+ 
+    // location
+    {
+        type: 'input',
+        name: 'location',
+        message:"where do you live?",
+        validate:userInfo => {
+            if (userInfo) {
+                return true;
+            }else{
+                console.log("please enter a valid location!");
+                return false;
+            }
+        }
+
+    },
+
+     // Linked account 
+     {
+        type: 'input',
+        name: 'resume',
+        message:"what's your linkEd account?",
+        validate:userInfo => {
+            if (userInfo) {
+                return true;
+            }else{
+                console.log("please enter a valid account!");
+                return false;
+            }
+        }
+
+    },
 
         // github account
     {
         type: 'input',
         name: 'github',
-        message:' github login? ',
+        message:'github login? ',
         validate: githubInput => {
             if (githubInput) {
             return true;
@@ -92,9 +124,9 @@ const questions = [
                 'Apache 2.0',
                 'GPL 3.0',
                 'None'
-            ]
+            ],
             
-        },
+        }
     
 ];
 
@@ -114,7 +146,7 @@ function init() {
         // console.log(data);
         // const template = generateMarkdown(data)
         // console.log(template);
-        writeToFile("./dist")
+        writeToFile("./dist/readme.md", generateMarkdown())
     })
 
 }
