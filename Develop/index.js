@@ -6,6 +6,7 @@ const generateMarkdown = require("./utils/generateMarkdown");
 const questions = [
         
     // user info 
+    // name
          {
             type: 'input',
             name: 'userInfo',
@@ -93,7 +94,8 @@ const questions = [
                 'None'
             ]
             
-        }
+        },
+    
 ];
 
 // TODO: Create a function to write README file
