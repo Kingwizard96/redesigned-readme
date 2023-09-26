@@ -4,7 +4,7 @@
 function renderLicenseBadge(license) {
   let badgeLabel = license.replace(" ", "&ensp;");
   return `
-  [![Generic badge](https://img.shields.io/badge/License-${badgeLabel}-green.svg)](${renderLicenseLink(license)})
+  [![Generic badge](https://img.shields.io/badge/License-${badgeLabel}-blue.svg)](${renderLicenseLink(licenseChoice)})
   `
 };
 // TODO: Create a function that returns the license link
@@ -16,7 +16,7 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
+function renderLicense(license) {
 
   if (license === "None") {
     return "";
@@ -38,10 +38,10 @@ function generateMarkdown(data) {
   const { github, location, resume, whatEmail, nameProject, licenseChoice, liveLink, liveSite, siteDemoLink, ...info } = data;
 
   return `
-  # ${data.projectTitle}
+  # ${data.nameProject}
 
   ## Table of Contents
-  - [Description](#project-description)
+  - [Description](#Description)
   - [Installation](#installation)
   - [Usage](#usage)
   - [Contribution](#contribution)
@@ -50,6 +50,10 @@ function generateMarkdown(data) {
 
 
   ## Project Description
+  ${data.describePro}
+
+  ## LinkedAccount
+  get resume, [${data.resume}] (https://www.linkedin.com/in/${data.resume}) 
 
   ## Installation 
   ${data.installationIns}
@@ -61,7 +65,7 @@ function generateMarkdown(data) {
   ${data.testInstructions}
 
   ## Questions
-  Reach out to the repo owner, [${github}](https://github.com/${github}) at ${data.whatEmail}.
+  Reach out to the repo owner, [${data.github}](https://github.com/${data.github}) at ${data.whatEmail}.
   `;
 }
 
