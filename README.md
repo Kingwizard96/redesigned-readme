@@ -8,7 +8,7 @@ This is a command-line application that accepts user input to generate a high-qu
 
 ## Gif 
 
-("https://drive.google.com/file/d/1viScSunmmQETkYKyac0BAMzjJmSooR7r/view")
+("https://drive.google.com/file/d/1U5FRb7aUXZWa-moPyS9GEKKqCtMeDwSy/view")
 
 ## Table of Contents
 - [Installation](#installation)
